@@ -1,0 +1,19 @@
+{
+  "name": "complete-node",
+  "version": "1.0.0",
+  "description": "basic-node-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/Akash4095/complete-node-js.git)"
+  },
+  "author": "Akash",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "node-js-logging-helper": "^1.0.1"
+  }
+}

@@ -1,9 +1,20 @@
-const app = require('./app')
-const fs = require('fs')
+// const app = require('./app')
+// const fs = require('fs')
 
-console.log('first')
-console.log('x', app.x)
-fs.writeFileSync("hello0", "akash") 
+// console.log('first')
+// console.log('x', app.x)
+// fs.writeFileSync("hello", "akash") // creating file withname hello
 
-console.log("....>", __dirname)   // finding directoryname
+// console.log("....>", __dirname)   // finding directoryname
+
+// createing server
+
+const http = require('http')
+
+const dataControl = (req, res) => {
+    res.write("<h1>Hello i am Akashaaaa</h1> <input />");
+    res.end()
+}
+http.createServer(dataControl).listen(4500);
+
 
