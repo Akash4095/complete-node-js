@@ -26,6 +26,8 @@ const htmlpath = path.join(__dirname, "html")
 // console.log('htmlpath', htmlpath)
 // app.use(express.static(htmlpath))
 
+app.set('view engine', 'ejs')
+
 app.get('', (req, resp) => {
     resp.sendFile(`${htmlpath}/index.html`)
 })
@@ -33,8 +35,22 @@ app.get('/about', (req, resp) => {
     resp.sendFile(`${htmlpath}/about.html`)
 })
 
+app.get('/profile', (req, resp) => {
+    const user = {
+        name: "Akash",
+        email: "abbc@test.com",
+        city: "Bidar",
+        skills: ['php', 'js', 'c++']
+    }
+    resp.render('profile', { user })  // render is to render html file
+})
+
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
 app.get('*', (req, resp) => {
-    resp.sendFile(`${htmlpath}/pageNotFound.html`)
+    resp.sendFile(`${htmlpath}/pageNotFound.html`)  // sendFile is to render html file
 })
 
 app.listen(5000)
