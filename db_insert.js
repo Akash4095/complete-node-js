@@ -2,7 +2,7 @@ const dbConnect = require('./dbconnect')
 
 const insertData = async () => {
     const db = await dbConnect();
-    const single = await db.insertMany(
+    const result = await db.insertOne(
         { name: "Hunter-350", brand: "bullet", price: "350000", category: "Bike" }
     )
     console.log('res', result)
